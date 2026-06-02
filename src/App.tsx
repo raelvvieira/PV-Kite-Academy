@@ -93,7 +93,7 @@ export default function App() {
                   href="#pricing"
                   className="btn-premium-primary text-xs sm:text-base md:text-lg tracking-wide w-full uppercase flex items-center justify-center py-3 px-6"
                 >
-                  Assina agora por R$39/mês
+                  ASSINE AGORA POR R$39/MÊS
                 </a>
               </div>
             </div>
@@ -784,7 +784,7 @@ export default function App() {
         ></div>
         
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <h2 className="font-headline font-black text-3xl md:text-5xl text-white uppercase tracking-tighter leading-none mb-6">
+          <h2 className="font-headline font-black text-[1.7rem] md:text-[2.7rem] text-white uppercase tracking-tighter leading-none mb-6">
             A Sua Evolução <span className="text-gradient">Começa Aqui</span>
           </h2>
           <p className="font-body text-white/80 text-xs sm:text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
@@ -792,7 +792,7 @@ export default function App() {
           </p>
           <a 
             href="#pricing"
-            className="btn-premium-primary text-[10px] sm:text-base md:text-lg tracking-wide uppercase flex items-center justify-center mx-auto w-fit py-3 px-8"
+            className="btn-premium-primary text-[9px] sm:text-[14.5px] md:text-base tracking-wide uppercase flex items-center justify-center mx-auto w-fit py-2.5 px-7"
           >
             Assinar a KiteAcademy. Garantia de 7 dias, sem risco
           </a>
