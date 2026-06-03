@@ -93,7 +93,7 @@ export default function App() {
                   href="#pricing"
                   className="btn-premium-primary text-xs sm:text-base md:text-lg tracking-wide w-full uppercase flex items-center justify-center py-3 px-6"
                 >
-                  ASSINE AGORA POR R$39/MÊS
+                  ASSINE AGORA POR R$67/MÊS
                 </a>
               </div>
             </div>
@@ -120,7 +120,7 @@ export default function App() {
           <h2 className="font-headline font-black text-2.5xl md:text-4xl text-white uppercase tracking-tighter leading-none mb-6">
             Tudo que você precisa para <span className="text-gradient font-black">subir de nível</span>
           </h2>
-          <p className="font-body text-white/80 text-sm md:text-lg leading-relaxed max-w-2xl mx-auto">Dois cursos completos, mapa mental e glossário premium, tudo acessível por R$ 39,90/mês. Uma progressão do básico ao MegaLoop, com análise visual de erros em cada etapa.</p>
+          <p className="font-body text-white/80 text-sm md:text-lg leading-relaxed max-w-2xl mx-auto">Dois cursos completos, mapa mental e glossário premium, tudo acessível por R$ 67/mês. Uma progressão do básico ao MegaLoop, com análise visual de erros em cada etapa.</p>
         </div>
 
         {/* Double Infinite Carousel Section (Edge-to-Edge) */}
@@ -654,7 +654,7 @@ export default function App() {
                   </p>
                   
                   <div className="flex items-center justify-center gap-2">
-                    <span className="font-headline font-black text-3xl md:text-5xl text-white tracking-tighter leading-none drop-shadow-md">R$ 39,90</span>
+                    <span className="font-headline font-black text-3xl md:text-5xl text-white tracking-tighter leading-none drop-shadow-md">R$ 67,00</span>
                     <span className="text-primary text-xs md:text-base font-black tracking-wider">/ MÊS</span>
                   </div>
 
@@ -723,7 +723,7 @@ export default function App() {
           {[
             {
               q: "O que é a KiteAcademy e como funciona a assinatura?",
-              a: "A KiteAcademy é uma plataforma de ensino por assinatura para kitesurfistas. Por R$ 39,90/mês você tem acesso a todos os cursos, mapas mentais, glossário e novos conteúdos que chegam todo mês. Cancele quando quiser, sem multa ou burocracia."
+              a: "A KiteAcademy é uma plataforma de ensino por assinatura para kitesurfistas. Por R$ 67/mês você tem acesso a todos os cursos, mapas mentais, glossário e novos conteúdos que chegam todo mês. Cancele quando quiser, sem multa ou burocracia."
             },
             {
               q: "Como eu evoluo sem aula prática presencial?",
