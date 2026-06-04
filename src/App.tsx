@@ -671,7 +671,7 @@ export default function App() {
 
                 <div className="w-full flex flex-col items-center px-2">
                   <a 
-                    href="https://pay.kiwify.com.br/"
+                    href="https://pay.kiwify.com.br/JgM9BI0"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full max-w-lg btn-premium-primary text-xs sm:text-base md:text-lg tracking-wide animate-glow uppercase py-4 md:py-4.5 whitespace-nowrap flex items-center justify-center px-6"
