@@ -78,7 +78,7 @@ export default function App() {
             {/* Left side: Text content */}
             <div className="lg:col-span-6 flex flex-col items-center lg:items-start gap-6">
               {/* Headline Principal (H1) */}
-              <h1 className="font-headline font-black text-2xl sm:text-4xl md:text-[3.12rem] lg:text-[3.84rem] leading-[1.1] lg:leading-[1.0] tracking-tighter text-white uppercase">
+              <h1 className="font-headline font-black text-[1.8rem] sm:text-[2.7rem] md:text-[3.74rem] lg:text-[4.61rem] leading-[1.1] lg:leading-[1.0] tracking-tighter text-white uppercase">
                 Aprenda Kitesurf na <span className="text-gradient font-black">primeira plataforma de ensino de Kite do Brasil!</span>
               </h1>
               
@@ -475,7 +475,7 @@ export default function App() {
       </section>
 
       {/* Pricing and Bonus Section */}
-      <section id="pricing" className="pt-12 md:pt-20 pb-8 md:pb-12 bg-surface relative overflow-hidden">
+      <section className="pt-12 md:pt-20 pb-8 md:pb-12 bg-surface relative overflow-hidden">
         {/* Background Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[37.5rem] h-[37.5rem] bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
         
@@ -574,7 +574,7 @@ export default function App() {
         </div>
 
         {/* Pricing Card Section */}
-        <div className="max-w-2xl mx-auto px-4 relative z-10">
+        <div id="pricing" className="max-w-2xl mx-auto px-4 relative z-10 scroll-mt-24">
           <div className="glass relative p-5 md:p-8 overflow-hidden shadow-[0_0_50px_rgba(247,89,0,0.1)] border-primary/20 rounded-2xl">
             <div className="absolute top-0 right-0 bg-kinetic px-4 md:px-6 py-1 font-headline font-black text-[8px] md:text-[10px] text-on-primary uppercase tracking-widest">LANÇAMENTO</div>
             
