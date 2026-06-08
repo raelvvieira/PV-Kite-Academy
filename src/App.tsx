@@ -618,7 +618,7 @@ export default function App() {
                 </defs>
 
                 {/* Area path for Com Estrutura */}
-                <motion.path 
+                <path 
                   d="M 50 260 
                      L 90.8 233.6 
                      L 131.6 205 
@@ -634,14 +634,10 @@ export default function App() {
                      L 540 62 
                      L 540 260 Z" 
                   fill="url(#com-estrutura-gradient)" 
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 1.5, delay: 0.8 }}
                 />
 
                 {/* Curve for: Sem Estrutura */}
-                <motion.path 
+                <path 
                   d="M 50 260 
                      L 90.8 249 
                      L 131.6 238 
@@ -659,14 +655,10 @@ export default function App() {
                   stroke="#ef4444" 
                   strokeWidth="2" 
                   strokeDasharray="4 4" 
-                  initial={{ pathLength: 0 }}
-                  whileInView={{ pathLength: 1 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
                 />
 
                 {/* Curve for: Com Estrutura */}
-                <motion.path 
+                <path 
                   d="M 50 260 
                      L 90.8 233.6 
                      L 131.6 205 
@@ -685,36 +677,24 @@ export default function App() {
                   strokeWidth="3.5" 
                   strokeLinecap="round"
                   filter="url(#glow-emerald)"
-                  initial={{ pathLength: 0 }}
-                  whileInView={{ pathLength: 1 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 2, ease: "easeOut" }}
                 />
 
                 {/* Dots for endpoints */}
-                <motion.circle 
+                <circle 
                   cx="540" 
                   cy="194" 
                   r="5" 
                   fill="#ef4444" 
                   stroke="#ffffff" 
                   strokeWidth="1.5" 
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 1.4, duration: 0.3 }}
                 />
-                <motion.circle 
+                <circle 
                   cx="540" 
                   cy="62" 
                   r="6" 
                   fill="#10b981" 
                   stroke="#ffffff" 
                   strokeWidth="2" 
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 1.8, duration: 0.3 }}
                 />
               </svg>
             </div>
