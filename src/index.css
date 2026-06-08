@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -7,9 +7,9 @@ html {
 }
 
 @theme {
-  --font-headline: "Space Grotesk", sans-serif;
-  --font-body: "Inter", sans-serif;
-  --font-label: "Inter", sans-serif;
+  --font-headline: "Poppins", sans-serif;
+  --font-body: "Poppins", sans-serif;
+  --font-label: "Poppins", sans-serif;
 
   --color-background: #0e0e0e;
   --color-surface: #0e0e0e;
@@ -138,18 +138,27 @@ html {
     display: flex;
     width: 200%;
     animation: marquee 20s linear infinite;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translate3d(0,0,0);
   }
 
   .animate-marquee-left-slow {
     display: flex;
     width: max-content;
     animation: marquee 35s linear infinite;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translate3d(0,0,0);
   }
 
   .animate-marquee-right-slow {
     display: flex;
     width: max-content;
     animation: marquee-right 35s linear infinite;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translate3d(0,0,0);
   }
 
   .animate-glow {
