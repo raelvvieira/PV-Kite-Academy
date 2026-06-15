@@ -47,35 +47,38 @@ const line2Images = [
 const socialProofTestimonials = [
   {
     nome: "Thiago Mendes",
-    foto: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80",
     depoimento: "A didática do Heiner é absurda de simples. Melhorei minha postura e a altura do salto logo nas primeiras sessões.",
     resultado: "1º salto em 15 dias"
   },
   {
     nome: "Marina Silva",
-    foto: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80",
     depoimento: "Tinha pavor de perder o controle do kite no vento forte. Com as aulas teóricas de física do velejo, recuperei 100% da confiança.",
     resultado: "Velejo sem medo e transições perfeitas"
   },
   {
     nome: "Felipe Rodrigues",
-    foto: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80",
     depoimento: "Eu cansava muito rápido por fazer força exagerada. O curso sobre a física do contra-vento mudou totalmente minha relação com a prancha.",
     resultado: "Evolução do básico ao intermediário"
   },
   {
     nome: "Carla Nunes",
-    foto: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80",
     depoimento: "Os mapas de erros comuns são o grande diferencial. Eu batia cabeça repetindo falhas que o Heiner explicou em 5 minutos de vídeo.",
     resultado: "Subiu de nível em semanas"
   },
   {
     nome: "Ronaldo Costa",
-    foto: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=150&h=150&q=80",
     depoimento: "Assisti ao passo a passo no celular antes de entrar na água e executei meu primeiro salto correto no mesmo dia. Incrível!",
     resultado: "Dominou a técnica de salto alto"
   }
 ];
+
+const getInitials = (name: string) => {
+  const parts = name.split(' ');
+  if (parts.length >= 2) {
+    return (parts[0][0] + parts[1][0]).toUpperCase();
+  }
+  return name.slice(0, 2).toUpperCase();
+};
 
 export default function App() {
   const [isManeuversExpanded, setIsManeuversExpanded] = useState(false);
@@ -206,13 +209,9 @@ export default function App() {
                   {/* Avatar / Photo */}
                   <div className="relative flex-shrink-0">
                     <div className="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-full blur opacity-75"></div>
-                    <img
-                      src={socialProofTestimonials[activeTestimonialIndex].foto}
-                      alt={socialProofTestimonials[activeTestimonialIndex].nome}
-                      className="w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-full border-2 border-background relative z-10"
-                      referrerPolicy="no-referrer"
-                      loading="lazy"
-                    />
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-background bg-neutral-900 flex items-center justify-center relative z-10 text-primary font-headline text-2xl sm:text-3xl font-semibold tracking-wider">
+                      {getInitials(socialProofTestimonials[activeTestimonialIndex].nome)}
+                    </div>
                   </div>
 
                   {/* Content */}
@@ -433,7 +432,7 @@ export default function App() {
         <div className="max-w-5xl mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-8 md:mb-10 px-4">
             <h2 className="font-headline font-normal text-[28px] md:text-[35px] text-background tracking-tighter leading-[1.3] mb-6">O que te <span className="bg-gradient-to-r from-[#FF6600] to-[#E50000] bg-clip-text text-transparent">trava</span></h2>
-            <p className="font-body text-background/80 text-[18px] md:text-[20px] leading-[1.4] max-w-2xl mx-auto">Muitos praticantes passam meses ou anos sem sair do mesmo lugar no velejo. Descubra os principais fatores que impedem a sua evolução.</p>
+            <p className="font-body text-background/80 text-[18px] md:text-[20px] leading-[1.4] max-w-2xl mx-auto">Muitos praticantes passam meses ou anos sem sair do mesmo lugar no velejo.</p>
           </div>
           <div className="grid grid-cols-1 gap-4 max-w-xl mx-auto">
             {[
@@ -504,6 +503,32 @@ export default function App() {
         </div>
       </section>
 
+      {/* YouTube Demo Section */}
+      <section className="py-12 md:py-20 relative overflow-hidden bg-[#0A0A0A] border-t border-b border-white/5">
+        <div className="max-w-5xl mx-auto px-4 md:px-8 relative z-10 text-center">
+          <div className="max-w-3xl mx-auto mb-8 md:mb-12">
+            <h2 className="font-headline font-normal text-[28px] md:text-[38px] text-white tracking-tighter leading-[1.25]">
+              Uma pequena <span className="bg-gradient-to-r from-[#FF6600] to-[#E50000] bg-clip-text text-transparent">demonstração</span> do que te espera
+            </h2>
+            <p className="font-body text-[#D0D0D0] text-[16px] md:text-[18px] mt-4 leading-[1.65] font-normal">
+              Veja na prática um trecho do método de explicação simplificado e visual do Heiner. Sem rodeios, direto ao ponto.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(255,102,0,0.15)] border border-white/10 bg-black/60 relative">
+            <iframe 
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/q0ukC9yIeAg?si=vBN1TpO93CI8A6cU" 
+              title="YouTube video player" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerPolicy="strict-origin-when-cross-origin" 
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
       {/* Method Section */}
       <section className="relative py-12 md:py-20 overflow-hidden bg-background">
         <div className="max-w-5xl mx-auto px-4 md:px-8 relative z-10">
@@ -513,7 +538,7 @@ export default function App() {
               A plataforma que <span className="bg-gradient-to-r from-[#FF6600] to-[#E50000] bg-clip-text text-transparent">encurta anos</span> em semanas
             </h2>
             <p className="font-body text-[#D0D0D0] text-[18px] md:text-[20px] leading-[1.4] max-w-2xl mx-auto mb-6 font-normal">
-              Não é sobre força. É sobre o ângulo da prancha, a posição da barra e o timing exato do kite. O Heiner decodificou cada movimento, das manobras fundamentais ao MegaLoop, para que você não precise adivinhar nada.
+              Não é sobre força. É sobre o ângulo da prancha, a posição da barra e o timing exato do kite.
             </p>
             <div className="flex flex-wrap justify-center gap-x-5 gap-y-4 max-w-4xl mx-auto">
               {[
@@ -1106,7 +1131,7 @@ export default function App() {
                         <CheckCircle className="w-4 h-4 text-primary shrink-0" />
                         <span className="text-white font-normal">Novos Conteúdos mensais</span>
                       </div>
-                      <span className="text-[#FF6B35] font-normal text-[14px] md:text-[16px] bg-[#FF6B35]/10 px-2.5 py-0.5 rounded">Incluso</span>
+                      <span className="text-emerald-500 font-normal text-[14px] md:text-[16px] bg-emerald-500/10 px-2.5 py-0.5 rounded">Incluso</span>
                     </div>
 
                     <div className="flex justify-between items-center pt-3 pb-2 text-[16px] md:text-[18px]">
@@ -1126,9 +1151,9 @@ export default function App() {
 
                 {/* Offer Section */}
                 <div className="flex flex-col items-center mb-5 text-center">
-                  {/* Desconto de 21% na primeira assinatura */}
-                  <div className="mb-2.5 bg-[#FF6600]/10 border border-[#FF6600]/30 py-1 px-4 rounded-full">
-                    <span className="text-[#FF6600] text-[13px] md:text-[14px] font-semibold tracking-wide uppercase">
+                  {/* Desconto de 21% na primeira assinatura - elegant mint green for trust and value contrast */}
+                  <div className="mb-3 bg-emerald-500/10 border border-emerald-500/20 py-1.5 px-4 rounded-full shadow-[0_2px_12px_rgba(16,185,129,0.03)]">
+                    <span className="text-emerald-400 text-[12px] md:text-[13px] font-semibold tracking-wider uppercase">
                       21% de desconto na primeira assinatura
                     </span>
                   </div>
@@ -1138,12 +1163,12 @@ export default function App() {
                   </p>
                   
                   <div className="flex items-baseline justify-center gap-1.5">
-                    <span className="font-headline font-semibold text-[32px] md:text-[38px] text-[#FF6B35] leading-none">R$ 37,00</span>
-                    <span className="text-white/85 text-[15px] md:text-[16px] font-normal font-sans">no primeiro mês</span>
+                    <span className="font-headline font-semibold text-[36px] md:text-[44px] text-white leading-none">R$ 37,00</span>
+                    <span className="text-neutral-400 text-[15px] md:text-[16px] font-normal font-sans">no primeiro mês</span>
                   </div>
                   
-                  <p className="text-white/60 text-[12px] md:text-[13px] font-normal mt-1.5">
-                    Após a primeira assinatura o valor é de R$ 47,00 mensal
+                  <p className="text-neutral-400 text-[13px] md:text-[14px] font-normal mt-2">
+                    Após o primeiro mês, apenas <span className="text-white font-medium">R$ 47,00/mês</span>
                   </p>
 
                   <div className="flex items-center justify-center bg-white/5 py-1.5 px-4 rounded-full border border-white/10 mt-3.5 mb-2">
