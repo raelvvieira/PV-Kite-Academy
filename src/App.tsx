@@ -894,10 +894,11 @@ export default function App() {
                 
                 <div className="mb-6 pb-6 border-b border-white/5">
                   <span className="text-emerald-500 text-[13px] font-semibold tracking-wider uppercase block">Acesso total e imediato</span>
-                  <div className="flex items-baseline gap-1 mt-1">
-                    <span className="font-headline font-semibold text-[32px] text-white">R$ 67</span>
-                    <span className="text-neutral-400 text-[15px] font-normal font-sans">/mês</span>
+                  <div className="flex items-baseline gap-1.5 mt-1">
+                    <span className="font-headline font-semibold text-[32px] text-white">R$ 37</span>
+                    <span className="text-neutral-300 text-[14px] font-normal font-sans">no 1º mês</span>
                   </div>
+                  <span className="text-neutral-500 text-[12px] font-normal block mt-1">(depois R$ 47/mês)</span>
                 </div>
 
                 <ul className="space-y-4 text-neutral-300 text-[14px] md:text-[15px]">
@@ -1125,17 +1126,28 @@ export default function App() {
 
                 {/* Offer Section */}
                 <div className="flex flex-col items-center mb-5 text-center">
-                  <p className="text-[#D0D0D0] text-[16px] md:text-[18px] font-normal mb-2">
+                  {/* Desconto de 21% na primeira assinatura */}
+                  <div className="mb-2.5 bg-[#FF6600]/10 border border-[#FF6600]/30 py-1 px-4 rounded-full">
+                    <span className="text-[#FF6600] text-[13px] md:text-[14px] font-semibold tracking-wide uppercase">
+                      21% de desconto na primeira assinatura
+                    </span>
+                  </div>
+
+                  <p className="text-[#D0D0D0] text-[15px] md:text-[16px] font-normal mb-1">
                     Assine hoje por apenas:
                   </p>
                   
-                  <div className="flex items-center justify-center gap-2">
-                    <span className="font-headline font-normal text-[22px] md:text-[25px] text-[#FF6B35]">R$ 67,00</span>
-                    <span className="text-white text-[16px] md:text-[18px] font-normal">/ mês</span>
+                  <div className="flex items-baseline justify-center gap-1.5">
+                    <span className="font-headline font-semibold text-[32px] md:text-[38px] text-[#FF6B35] leading-none">R$ 37,00</span>
+                    <span className="text-white/85 text-[15px] md:text-[16px] font-normal font-sans">no primeiro mês</span>
                   </div>
+                  
+                  <p className="text-white/60 text-[12px] md:text-[13px] font-normal mt-1.5">
+                    Após a primeira assinatura o valor é de R$ 47,00 mensal
+                  </p>
 
-                  <div className="flex items-center justify-center bg-white/5 py-2 px-5 rounded-full border border-white/10 mt-3.5 mb-2">
-                    <span className="text-[#D0D0D0] text-[14px] md:text-[16px] font-normal">
+                  <div className="flex items-center justify-center bg-white/5 py-1.5 px-4 rounded-full border border-white/10 mt-3.5 mb-2">
+                    <span className="text-[#D0D0D0] text-[13px] md:text-[14px] font-normal">
                       Cancele quando quiser • Sem fidelidade
                     </span>
                   </div>
@@ -1143,7 +1155,7 @@ export default function App() {
 
                 <div className="w-full flex flex-col items-center px-2">
                   <a 
-                    href="https://pay.kiwify.com.br/JgM9BI0"
+                    href="https://pay.kiwify.com.br/VpeFryq"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full max-w-lg btn-premium-primary text-[16px] md:text-[18px] font-semibold tracking-wide animate-glow uppercase py-4 md:py-4.5 flex items-center justify-center px-6"
@@ -1198,7 +1210,7 @@ export default function App() {
           {[
             {
               q: "O que é a KiteAcademy e como funciona a assinatura?",
-              a: "A KiteAcademy é uma plataforma de ensino por assinatura para kitesurfistas. Por R$ 67/mês você tem acesso a todos os cursos, mapas mentais, glossário e novos conteúdos que chegam todo mês. Cancele quando quiser, sem multa ou burocracia."
+              a: "A KiteAcademy é uma plataforma de ensino por assinatura para kitesurfistas. Aproveitando nossa oferta atual, o primeiro mês custa apenas R$ 37,00 (com 21% de desconto) e, a partir do segundo mês, o valor da assinatura é de R$ 47,00 mensais. Você tem acesso a todos os cursos, mapas mentais, glossário e novos conteúdos que chegam todo mês. Cancele quando quiser, sem multa ou burocracia."
             },
             {
               q: "Como eu evoluo sem aula prática presencial?",
