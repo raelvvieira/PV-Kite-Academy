@@ -117,9 +117,9 @@ export default function App() {
             <div className="lg:col-span-6 flex flex-col items-center lg:items-start gap-6">
               {/* Headline Principal (H1) */}
               <h1 className="font-headline font-normal text-[22px] md:text-[25px] leading-[1.3] tracking-tighter text-white">
-                <span className="inline-block whitespace-nowrap">Aprenda Kitesurf em menos de 30 dias</span>{" "}
+                <span className="inline-block">Aprenda Kitesurf em menos de 30 dias</span>{" "}
                 <span className="bg-gradient-to-r from-[#FF6600] to-[#E50000] bg-clip-text text-transparent font-normal block sm:inline">
-                  com a plataforma online nº1 do Brasil com video aulas das principais manobras de kite
+                  com a plataforma online de Kite nº1 do Brasil: Assista video aulas das principais manobras de kite!!
                 </span>
               </h1>
               
